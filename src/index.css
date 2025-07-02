@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-rubik: "Rubik", sans-serif;
+  /*(sub-heading at the top of the app UI)*/
+  --color-Pale-Violet: hsl(276, 100%, 81%);
+
+  /*(chat on the left)*/
+  --color-Moderate-Violet: hsl(276, 55%, 52%);
+  /*(chat on the right)*/
+  --color-Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  /*(placeholder text)*/
+  --color-Grayish-Blue: hsl(206, 6%, 79%);
+  /*(main heading)*/
+  --color-Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  /*(paragraph)*/
+  --color-Dark-Grayish-Violet: hsl(270, 7%, 64%);
+
+  /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+  --color-Light-Magenta: hsl(293, 100%, 63%);
+  --color-Light-Violet: hsl(264, 100%, 61%);
+
+  --color-White: hsl(0, 0%, 100%);
+  /*(app background)*/
+  --color-Light-Grayish-Violet: hsl(270, 20%, 96%);
+  /*(submit button background)*/
+  --color-Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  /*(radio button outline)*/
+  --color-Very-Light-Magenta: hsl(289, 100%, 72%);
+
+  --color-bgBody: hsl(0, 0%, 98%);
+  --color-leftChat: hsl(272, 41%, 93%);
+  --color-bgAfter: hsl(290, 37%, 97%);
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  src: url("/src/assets/fonts/Rubik/static/Rubik-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 500;
+  src: url("/src/assets/fonts/Rubik/static/Rubik-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 700;
+  src: url("/src/assets/fonts/Rubik/static/Rubik-Bold.ttf");
+}
+
+body {
+  @apply before:content-[''] 
+  before:absolute before:-z-1 
+  before:w-[450px] before:h-[70vh] 
+  lg:before:h-[80vh] before:bg-gradient-to-b
+   before:from-Light-Magenta before:to-Light-Violet 
+   before:-left-25 before:top-0 before:rounded-b-full
+   max-sm:before:rounded-br-full  max-sm:before:-left-60
+   after:content-[''] after:absolute after:-z-1 
+   after:w-[450px] after:h-[70vh] after:-right-30 after:bottom-0 after:bg-bgAfter after:rounded-t-full
+   max-sm:after:rounded-tr-full  max-sm:after:-right-60;
+}
+
+blockquote {
+  @apply text-sm;
+}
